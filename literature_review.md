@@ -114,12 +114,8 @@ In systems with distributed departmental databases, RBAC can be extended to enab
 ##Conclusion
 The literature on centralized and distributed databases underscores their respective strengths and weaknesses, with PostgreSQL emerging as a leading solution due to its robust support for distributed systems, cross-database queries, and strong privacy mechanisms. However, existing research largely focuses on the scalability, security, and accessibility of educational systems, areas where PostgreSQL’s advanced features align well. Despite these advancements, the current body of literature lacks in-depth discussions on hybrid database solutions, particularly for modular student information systems (SIS). A notable gap is the underexploration of how centralized and distributed databases can be effectively integrated within educational systems, especially in managing centralized sequence management alongside departmental databases. Future research could explore the development of optimized hybrid architectures tailored for modular SIS, enhancing PostgreSQL's scalability for large-scale educational databases, and implementing machine learning techniques to predict database loads and automate performance optimization. This research contributes to existing knowledge by focusing on the hybridization of centralized and distributed database systems using PostgreSQL, addressing scalability challenges, cross-departmental data management, and privacy concerns within educational environments.
 
+##References
 
-
-
-
-
-References
 1.	Özsu, M. T., & Valduriez, P. (2020). Principles of Distributed Database Systems. Springer.
 2.	PostgreSQL Documentation. (2024). Retrieved from https://www.postgresql.org/docs/.
 3.	MySQL Documentation. (2024). Retrieved from https://dev.mysql.com/doc/.

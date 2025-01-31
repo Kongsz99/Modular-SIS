@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Scholarships</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="sidebar.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .search-results {
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            width: 20%;
+            background-color: white;
+            z-index: 100;
+            display: none;
+        }
+
+        .search-result-item {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .search-result-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 200;
+        }
+
+        .popup.show {
+            display: block;
+        }
+
+        .popup button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="student.html">
+                        <i class="fas fa-users"></i>
+                        <span>Students</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staff.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="programme.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Programmes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="module.html">
+                        <i class="fas fa-book"></i>
+                        <span>Modules</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="enrolment.html">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Enrolment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="finance.html">
+                        <i class="fas fa-money-check-alt"></i>
+                        <span>Finance</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="scholarship.html">
+                        <i class="fas fa-award"></i>
+                        <span>Scholarship</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="exam.html">
+                        <i class="fas fa-pencil-alt"></i>
+                        <span>Exams</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="header-left">
+                    <h1>Manage Scholarships</h1>
+                </div>
+            </div>
+
+            <!-- Sidebar Toggle Icon -->
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+             <!-- Content Area -->
+            <div class="content">
+                <!-- New Button -->
+                <div class="new-button-container">
+                    <a href="add_programme.html" class="btn-new">
+                        <i class="fas fa-plus"></i>
+                        New
+                    </a>
+                </div>    
+            <!-- Content Area -->
+            <div class="content">
+                <h2>All Scholarships</h2>
+                <div class="table-container">
+                    <table id="scholarship-list">
+                        <thead>
+                            <tr>
+                                <th>Scholarship ID</th>
+                                <th>Scholarship Name</th>
+                                <th>Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Scholarships will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Scholarship Assignment</h2>
+
+                <div class="search-filter">
+                    <form id="assign-scholarship-form">
+                        <input type="text" id="student-search" name="student-search" placeholder="Search by name or ID" autocomplete="off" oninput="searchStudents(this.value)">
+                        
+                        <!-- Search Results -->
+                        <div id="search-results" class="search-results"></div>
+
+                        <select id="scholarship" name="scholarship" required>
+                            <option value="">Select a Scholarship</option>
+                            <!-- Scholarships will be populated dynamically -->
+                        </select>
+
+                        <button type="submit" class="btn" id="assign-btn">Assign Scholarship</button>
+                    </form>
+                </div>
+
+                <!-- Assigned Scholarships Table -->
+                <h2>Assigned Scholarships</h2>
+                <table id="assigned-scholarships">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Scholarship</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Assigned scholarships will be displayed here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for confirmation -->
+    <div class="popup" id="confirmation-popup">
+        <p>Scholarship successfully assigned to the student!</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        // List of scholarships (simulated)
+        const scholarships = [
+            { id: 'SC001', name: 'Merit-Based Scholarship', amount: '$1000' },
+            { id: 'SC002', name: 'Need-Based Scholarship', amount: '$1500' },
+            { id: 'SC003', name: 'Sports Scholarship', amount: '$800' },
+        ];
+
+        // List of students (simulated)
+        const students = [
+            { id: '101', name: 'John Doe' },
+            { id: '102', name: 'Jane Smith' },
+            { id: '103', name: 'Alice Johnson' },
+            { id: '104', name: 'Bob Brown' },
+        ];
+
+        // List of assigned scholarships
+        let assignedScholarships = [];
+
+        // Populate the scholarship list
+        function populateScholarshipList() {
+            const scholarshipList = document.getElementById('scholarship-list').getElementsByTagName('tbody')[0];
+            scholarshipList.innerHTML = ''; // Clear existing rows
+
+            scholarships.forEach(scholarship => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${scholarship.id}</td>
+                    <td>${scholarship.name}</td>
+                    <td>${scholarship.amount}</td>
+                    <td>
+                        <button class="btn-edit" onclick="editScholarship('${scholarship.id}')">Edit</button>
+                        <button class="btn-delete" onclick="deleteScholarship('${scholarship.id}')">Delete</button>
+                    </td>
+                `;
+                scholarshipList.appendChild(row);
+            });
+
+            // Populate the scholarship dropdown in the assignment form
+            const scholarshipDropdown = document.getElementById('scholarship');
+            scholarshipDropdown.innerHTML = '<option value="">Select a Scholarship</option>';
+            scholarships.forEach(scholarship => {
+                const option = document.createElement('option');
+                option.value = scholarship.id;
+                option.textContent = scholarship.name;
+                scholarshipDropdown.appendChild(option);
+            });
+        }
+
+        // Function to search for students based on user input
+        function searchStudents(query) {
+            const searchResultsDiv = document.getElementById('search-results');
+            searchResultsDiv.innerHTML = ''; // Clear any previous results
+
+            if (query.trim() === '') {
+                searchResultsDiv.style.display = 'none';
+                return;
+            }
+
+            // Filter students based on the query
+            const filteredStudents = students.filter(student => {
+                return student.name.toLowerCase().includes(query.toLowerCase()) || student.id.includes(query);
+            });
+
+            if (filteredStudents.length > 0) {
+                searchResultsDiv.style.display = 'block';
+                filteredStudents.forEach(student => {
+                    const resultItem = document.createElement('div');
+                    resultItem.classList.add('search-result-item');
+                    resultItem.innerHTML = `${student.name} (ID: ${student.id})`;
+                    resultItem.onclick = () => selectStudent(student);
+                    searchResultsDiv.appendChild(resultItem);
+                });
+            } else {
+                searchResultsDiv.style.display = 'none';
+            }
+        }
+
+        // Function to handle student selection
+        function selectStudent(student) {
+            document.getElementById('student-search').value = `${student.name} (ID: ${student.id})`;
+            document.getElementById('student-search').setAttribute('data-student-id', student.id); // Store student ID
+            document.getElementById('search-results').style.display = 'none'; // Hide search results
+        }
+
+        // Function to handle form submission for assigning scholarship
+        document.getElementById('assign-scholarship-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const studentId = document.getElementById('student-search').getAttribute('data-student-id');
+            const studentName = document.getElementById('student-search').value.split(' (')[0]; // Extract student name
+
+            if (!studentId || !studentName) {
+                alert('Please select a valid student.');
+                return;
+            }
+
+            const scholarshipId = document.getElementById('scholarship').value;
+
+            if (!scholarshipId) {
+                alert('Please select a scholarship.');
+                return;
+            }
+
+            // Find the selected scholarship
+            const selectedScholarship = scholarships.find(scholarship => scholarship.id === scholarshipId);
+
+            // Add the scholarship assignment to the list
+            assignedScholarships.push({
+                studentId,
+                studentName,
+                scholarshipId,
+                scholarshipName: selectedScholarship.name,
+                amount: selectedScholarship.amount
+            });
+
+            // Update the assigned scholarships table
+            updateAssignedScholarshipsTable();
+
+            // Show confirmation popup
+            showPopup();
+        });
+
+        // Function to update the assigned scholarships table
+        function updateAssignedScholarshipsTable() {
+            const table = document.getElementById('assigned-scholarships').getElementsByTagName('tbody')[0];
+            table.innerHTML = ''; // Clear existing rows
+
+            assignedScholarships.forEach(assignment => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${assignment.studentId}</td>
+                    <td>${assignment.studentName}</td>
+                    <td>${assignment.scholarshipName}</td>
+                    <td>${assignment.amount}</td>
+                    <td><button class="btn-delete" onclick="removeScholarship('${assignment.studentId}', '${assignment.scholarshipId}')">Remove</button></td>
+                `;
+                table.appendChild(row);
+            });
+        }
+
+        // Function to remove a scholarship from a student
+        function removeScholarship(studentId, scholarshipId) {
+            if (confirm("Are you sure you want to remove this scholarship?")) {
+                assignedScholarships = assignedScholarships.filter(assignment => 
+                    assignment.studentId !== studentId || assignment.scholarshipId !== scholarshipId
+                );
+                updateAssignedScholarshipsTable();
+                alert('Scholarship removed successfully!');
+            }
+        }
+
+        // Function to show the confirmation popup
+        function showPopup() {
+            const popup = document.getElementById('confirmation-popup');
+            popup.classList.add('show'); // Show the popup
+        }
+
+        // Function to close the popup when the user clicks OK
+        function closePopup() {
+            const popup = document.getElementById('confirmation-popup');
+            popup.classList.remove('show'); // Hide the popup
+        }
+
+        // Populate the scholarship list on page load
+        window.onload = function() {
+            populateScholarshipList();
+        };
+    </script>
+</body>
+</html>

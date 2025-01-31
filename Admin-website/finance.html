@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Finance</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="sidebar.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head> 
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="student.html">
+                        <i class="fas fa-users"></i>
+                        <span>Manage Students</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staff.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Manage Staff</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="programme.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Manage Programmes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="module.html">
+                        <i class="fas fa-book"></i>
+                        <span>Manage Modules</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="enrolment.html">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Enrolment</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="finance.html">
+                        <i class="fas fa-money-check-alt"></i>
+                        <span>Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="scholarship.html">
+                        <i class="fas fa-award"></i>
+                        <span>Scholarship</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="exam.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Manage Exam</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>Manage Finance</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Toggle Icon -->
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content">
+                <!-- Search and Filter -->
+                <div class="search-filter">
+                    <input type="text" id="search" placeholder="Search by ID or name">
+                    <select id="filter-status">
+                        <option value="">Filter by Status</option>
+                        <option value="paid">Paid</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                    <select id="filter-year">
+                        <option value="">Filter by Year</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                    </select>
+                    <button class="btn" onclick="applyFilters()">Apply</button>
+                </div>
+
+                <!-- Finance List Subtitle -->
+                <h2 class="finance-list-subtitle">Finance List</h2>
+
+                <!-- Finance List Table -->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Name</th>
+                                <th>Amount</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="student_details.html?id=101" class="clickable">101</a></td>
+                                <td><a href="student_details.html?id=101" class="clickable">John Doe</a></td>
+                                <td>$500</td>
+                                <td>2023-10-15</td>
+                                <td>Pending</td>
+                                <td>
+                                    <button class="btn-edit" onclick="editStudent(101)">Edit</button>
+                                    <button class="btn-delete" onclick="deleteStudent(101)">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td>Jane Smith</td>
+                                <td>$600</td>
+                                <td>2024-01-20</td>
+                                <td>Paid</td>
+                                <td>
+                                    <button class="btn-edit" onclick="editStudent(102)">Edit</button>
+                                    <button class="btn-delete" onclick="deleteStudent(102)">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>103</td>
+                                <td>Alice Johnson</td>
+                                <td>$700</td>
+                                <td>2023-12-05</td>
+                                <td>Pending</td>
+                                <td>
+                                    <button class="btn-edit" onclick="editStudent(103)">Edit</button>
+                                    <button class="btn-delete" onclick="deleteStudent(103)">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>104</td>
+                                <td>Bob Brown</td>
+                                <td>$800</td>
+                                <td>2024-03-10</td>
+                                <td>Paid</td>
+                                <td>
+                                    <button class="btn-edit" onclick="editStudent(104)">Edit</button>
+                                    <button class="btn-delete" onclick="deleteStudent(104)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to apply search and filter
+        function applyFilters() {
+            const searchQuery = document.getElementById('search').value.toLowerCase();
+            const statusFilter = document.getElementById('filter-status').value.toLowerCase();
+            const yearFilter = document.getElementById('filter-year').value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const id = row.cells[0].textContent.toLowerCase();
+                const name = row.cells[1].textContent.toLowerCase();
+                const status = row.cells[4].textContent.toLowerCase();
+                const dueDate = row.cells[3].textContent.toLowerCase();
+                const year = dueDate.split('-')[0]; // Extract year from Due Date
+
+                const matchesSearch = id.includes(searchQuery) || name.includes(searchQuery);
+                const matchesStatus = statusFilter === '' || status === statusFilter;
+                const matchesYear = yearFilter === '' || year === yearFilter;
+
+                if (matchesSearch && matchesStatus && matchesYear) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to redirect to edit payment page
+        function editPayment(paymentId) {
+            window.location.href = `edit_payment.html?id=${paymentId}`;
+        }
+
+        // Function to delete a payment
+        function deletePayment(paymentId) {
+            if (confirm(`Are you sure you want to delete Payment ID ${paymentId}?`)) {
+                alert(`Payment ID ${paymentId} deleted`);
+                // You can send an API request here to delete the payment from the database
+            }
+        }
+    </script>
+</body>
+</html>

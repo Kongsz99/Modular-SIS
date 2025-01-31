@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Students</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="student.html">
+                        <i class="fas fa-users"></i>
+                        <span>Student</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staff.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="programme.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Programme</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="module.html">
+                        <i class="fas fa-book"></i>
+                        <span>Module</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="enrolment.html">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Enrolment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="finance.html">
+                        <i class="fas fa-money-check-alt"></i>
+                        <span>Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="scholarship.html">
+                        <i class="fas fa-award"></i>
+                        <span>Scholarship</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="exam.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Exam</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>Manage Student</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Toggle Icon -->
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+                 <!-- Content Area -->
+               <div class="content">
+                <!-- New Button -->
+                <div class="new-button-container">
+                    <a href="add_staff.html" class="btn-new">
+                        <i class="fas fa-plus"></i>
+                        New
+                    </a>
+                </div>
+
+              <!-- Content Area -->
+            <div class="content">
+                <!-- Search and Filter -->
+                <div class="search-filter">
+                    <input type="text" id="search" placeholder="Search by name, ID ">
+                    <select id="filter-department">
+                        <option value="">Filter by Department</option>
+                        <option value="computer-science">Computer Science</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="physics">Physics</option>
+                    </select>
+                    <select id="filter-status">
+                        <option value="">Filter by Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="completed">Completed</option>
+                        <option value="suspended">Suspended</option>
+                        <option value="withdrawn">Withdrawn</option>
+                    </select>
+                    <button class="btn" onclick="applyFilters()">Apply</button>
+                </div>
+
+                <!-- Student List Subtitle -->
+                <h2 class="list-subtitle">Student List</h2>
+
+                <!-- Student List Table -->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>Programme</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="student_details.html?id=101" class="clickable">101</a></td>
+                                <td><a href="student_details.html?id=101" class="clickable">John Doe</a></td>
+                                <td>john.doe@example.com</td>
+                                <td>Computer Science</td>
+                                <td>Computer Science</td>
+                                <td>
+                                    <select class="status-dropdown" onchange="updateStatus(101, this.value)">
+                                        <option value="active" selected>Active</option>
+                                        <option value="inactive">Inactive</option>
+                                        <option value="completed">Completed</option>
+                                        <option value="suspended">Suspended</option>
+                                        <option value="withdrawn">Withdrawn</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button class="btn-edit" onclick="editStudent(101)">Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td>Jane Smith</td>
+                                <td>jane.smith@example.com</td>
+                                <td>Mathematics</td>
+                                <td>Mathematics</td>
+                                <td>
+                                    <select class="status-dropdown" onchange="updateStatus(102, this.value)">
+                                        <option value="active">Active</option>
+                                        <option value="inactive" selected>Inactive</option>
+                                        <option value="completed">Completed</option>
+                                        <option value="suspended">Suspended</option>
+                                        <option value="withdrawn">Withdrawn</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <button class="btn-edit" onclick="editStudent(102)">Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar.js script loaded at the end of the body -->
+    <script src="sidebar.js"></script>
+
+    <!-- Custom Script -->
+    <script>
+        // Function to apply search and filter
+        function applyFilters() {
+            const searchQuery = document.getElementById('search').value.toLowerCase();
+            const departmentFilter = document.getElementById('filter-department').value.toLowerCase();
+            const statusFilter = document.getElementById('filter-status').value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const name = row.cells[1].textContent.toLowerCase();
+                const id = row.cells[0].textContent.toLowerCase();
+                const department = row.cells[3].textContent.toLowerCase();
+                const status = row.querySelector('.status-dropdown').value.toLowerCase();
+
+                const matchesSearch = name.includes(searchQuery) || id.includes(searchQuery) || department.includes(searchQuery);
+                const matchesDepartment = departmentFilter === '' || department === departmentFilter;
+                const matchesStatus = statusFilter === '' || status === statusFilter;
+
+                if (matchesSearch && matchesDepartment && matchesStatus) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to update student status
+        function updateStatus(studentId, status) {
+            alert(`Student ID ${studentId} status updated to ${status}`);
+            // You can send an API request here to update the status in the database
+        }
+
+        // Function to redirect to edit student page
+        function editStudent(studentId) {
+            window.location.href = `edit_student.html?id=${studentId}`;
+        }
+    </script>
+</body>
+</html>

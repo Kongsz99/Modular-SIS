@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="sidebar.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="student.html">
+                        <i class="fas fa-users"></i>
+                        <span>Manage Students</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staff.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Manage Staff</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="programme.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Manage Programmes</span>
+                    </a>
+                </li>
+                <li  class="active">
+                    <a href="module.html">
+                        <i class="fas fa-book"></i>
+                        <span>Manage Modules</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>Module Details</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Sidebar Toggle Icon -->
+             <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content">
+                <!-- Back Button -->
+                <a href="module.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Back to Module List
+                </a>
+
+                <!-- Staff Details Container -->
+                <div class="person-details-container">
+                    <!-- Two-Column Layout for Personal and Job Details -->
+                    <div class="details-grid-container">
+                        <!-- Personal Details -->
+                        <div class="details-section">
+                            <h2>CS1SC22 : Introduction to AI</h2>                            <div class="details-grid">
+                                <div class="detail-item">
+                                    <label>Module Code:</label>
+                                    <span id="module-code">CS1SC22</span>
+                                </div>
+                                <div class="detail-item">
+                                    <label>Department:</label>
+                                    <span id="department">Computer Science</span>
+                                </div>
+                                <div class="detail-item">
+                                    <label>Module Name:</label>
+                                    <span id="module-name">Introduction to AI</span>
+                                </div>
+                                <div class="detail-item">
+                                    <label>Level:</label>
+                                    <span id="level">1</span>
+                                </div>
+                                <div class="detail-item">
+                                    <label>Associated Program:</label>
+                                    <span id="associated-program">Computer Science</span>
+                                </div>
+                                <div class="detail-item">
+                                    <label>Credits:</label>
+                                    <span id="credits">20</span>
+                                </div>
+                                <div class="detail-item">
+                                    <label>Description:</label>
+                                    <span id="description">This module covers the basics of computer science, including programming, algorithms, and data structures.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Job Details -->
+                        <div class="details-section">
+                            <h2>Additional Information</h2>
+                            <div class="details-grid">
+                                <div class="detail-item">
+                                    <label>Start Date:</label>
+                                    <span id="start-date">2023-09-01</span>
+                                </div>
+                                <div class="detail-item">
+                                    <label>Module Leader:</label>
+                                    <span id="module-leader">Dr Richard</span>
+                                </div>
+                                <div class="detail-item">
+                                    <label>End Date:</label>
+                                    <span id="end-date">2024-06-30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

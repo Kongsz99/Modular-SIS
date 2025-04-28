@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="sidebar.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="student.html">
+                        <i class="fas fa-users"></i>
+                        <span>Manage Students</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staff.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Manage Staff</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="programme.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Manage Programmes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="module.html">
+                        <i class="fas fa-book"></i>
+                        <span>Manage Modules</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>Student Details</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Sidebar Toggle Icon -->
+             <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content">
+                <!-- Back Button -->
+                <a href="student.html" class="back-button">
+                    <i class="fas fa-arrow-left"></i> Back to Student List
+                </a>
+
+                <!-- Student Details Container -->
+                <div class="person-details-container">
+                    <!-- Personal Details -->
+                    <div class="details-section">
+                        <h2>Personal Details</h2>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <label>Full Name:</label>
+                                <span id="full-name">John Doe</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Student ID:</label>
+                                <span id="student-id">101</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Gender:</label>
+                                <span id="gender">Female</span>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <label>Username:</label>
+                                <span id="username">johndoe101</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Date of Birth:</label>
+                                <span id="dob">1995-05-15</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Contact Number:</label>
+                                <span id="contact-number">+1234567890</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Personal Email:</label>
+                                <span id="personal-email">john.doe@gmail.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Address:</label>
+                                <span id="address">123 Main St, Springfield, IL,
+                                     23000 Dungun, Terengganu</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>University Email:</label>
+                                <span id="university-email">john.doe@university.edu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Programme Details -->
+                    <div class="details-section">
+                        <h2>Programme Details</h2>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <label>Programme Name:</label>
+                                <span id="programme-name">BSc Computer Science</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Department:</label>
+                                <span id="department">Computer Science</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Duration (Years):</label>
+                                <span id="duration">3</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Current Year:</label>
+                                <span id="current-year">2</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Programme Start Date:</label>
+                                <span id="programme-start-date">2022-09-01</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Status:</label>
+                                <span id="status">Active</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Programme End Date:</label>
+                                <span id="programme-end-date">2025-06-30</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modules Taken -->
+                    <div class="details-section">
+                        <h2>Modules Taken</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Code</th>
+                                    <th>Title</th>
+                                    <th>Credits</th>
+                                    <th>Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2022</td>
+                                    <td>CS101</td>
+                                    <td>Introduction to Programming</td>
+                                    <td>20</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>2022</td>
+                                    <td>CS102</td>
+                                    <td>Data Structures</td>
+                                    <td>20</td>
+                                    <td>B+</td>
+                                </tr>
+                                <tr>
+                                    <td>2023</td>
+                                    <td>CS201</td>
+                                    <td>Algorithms</td>
+                                    <td>20</td>
+                                    <td>A-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Current Modules -->
+                    <div class="details-section">
+                        <h2>Current Modules</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Code</th>
+                                    <th>Title</th>
+                                    <th>Credits</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024</td>
+                                    <td>CS301</td>
+                                    <td>Advanced Programming</td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>2024</td>
+                                    <td>CS302</td>
+                                    <td>Database Systems</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Tuition Fee Details -->
+                    <div class="details-section">
+                        <h2>Tuition Fee Details</h2>
+                        <table>
+                            <tr>
+                                <th>Description</th>
+                                <th>Details</th>
+                            </tr>
+                            <tr>
+                                <td>Tuition Fees:</td>
+                                <td>2022/3 BSc Computer Science</td>
+                            </tr>
+                            <tr>
+                                <td>Total Tuition Fee:</td>
+                                <td>23,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>Scholarship Name:</td>
+                                <td>U Global Scholarship</td>
+                            </tr>
+                            <tr>
+                                <td>Scholarship Applied:</td>
+                                <td>4,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>Amount to be Paid by Student:</td>
+                                <td>19,000.00</td>
+                            </tr>
+                        </table>
+                        <!-- <table>
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Amount (£)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Total Tuition Fee (2024/5 BSc Computer Science)</td>
+                                    <td>23,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Scholarship Name (U Global Scholarship)</td>
+                                    <td>4,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Amount to be Paid by Student</strong></td>
+                                    <td><strong>19,000.00</strong></td>
+                                </tr>
+                            </tbody>
+                        </table> -->
+                    </div>
+
+                    <!-- Tuition Fee Payment Status -->
+                    <div class="details-section">
+                        <h2>Tuition Fee Payment Status</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Semester</th>
+                                    <th>Amount to Pay</th>
+                                    <th>Deadline</th>
+                                    <th>Payment Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>First Semester</td>
+                                    <td>£9,500.00</td>
+                                    <td>End of October</td>
+                                    <td>
+                                        <span class="payment-status paid">Paid</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Second Semester</td>
+                                    <td>£9,500.00</td>
+                                    <td>End of January</td>
+                                    <td>
+                                        <span class="payment-status not-paid">Not Paid</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

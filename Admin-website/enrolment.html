@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Enrolments</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="sidebar.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="student.html">
+                        <i class="fas fa-users"></i>
+                        <span>Manage Students</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="staff.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Manage Staff</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="programme.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Manage Programmes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="module.html">
+                        <i class="fas fa-book"></i>
+                        <span>Manage Modules</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="enrolment.html">
+                        <i class="fas fa-user-plus"></i>
+                        <span>Manage Enrolment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="finance.html">
+                        <i class="fas fa-money-check-alt"></i>
+                        <span>Manage Finance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Scholarship.html">
+                        <i class="fas fa-award"></i>
+                        <span>Scholarship</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="exam.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Manage Exam</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>Manage Enrolments</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Toggle Icon -->
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content">
+                <!-- Search and Filter -->
+                <div class="search-filter">
+                    <input type="text" id="search" placeholder="Search by name, ID ">
+                    <select id="filter-department">
+                        <option value="">Filter by Department</option>
+                        <option value="computer science">Computer Science</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="physics">Physics</option>
+                    </select>
+                    <select id="filter-programme">
+                        <option value="">Filter by Programme</option>
+                        <option value="computer science">Computer Science</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="physics">Physics</option>
+                    </select>
+                    <select id="filter-year">
+                        <option value="">Filter by Year</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                    <button class="btn" onclick="applyFilters()">Apply</button>
+                </div>
+
+                <!-- Enrolment List Subtitle -->
+                <h2 class="list-subtitle">Enrolment List</h2>
+
+                <!-- Enrolment List Table -->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Name</th>
+                                <th>Department</th>
+                                <th>Programme</th>
+                                <th>Enrolment Date</th>
+                                <th>Current Year</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>101</td>
+                                <td><a href="enrolment_detail.html?id=101" class="clickable">John Doe</a></td>
+                                <td>Computer Science</td>
+                                <td>Computer Science</td>
+                                <td>2023-09-01</td>
+                                <td>1</td>
+                                <td>active</td>
+                                <td>
+                                    <button class="btn-edit" onclick="editStudent(101)">Edit</button>
+                                    <button class="btn-delete" onclick="deleteStudent(101)">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>102</td>
+                                <td>Jane Smith</td>
+                                <td>Mathematics</td>
+                                <td>Mathematics</td>
+                                <td>2023-09-05</td>
+                                <td>1</td>
+                                <td>active</td>
+                                <td>
+                                    <button class="btn-edit" onclick="editStudent(102)">Edit</button>
+                                    <button class="btn-delete" onclick="deleteStudent(102)">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>103</td>
+                                <td>Alice Johnson</td>
+                                <td>Physics</td>
+                                <td>Physics</td>
+                                <td>2022-09-01</td>
+                                <td>2</td>
+                                <td>active</td>
+                                <td>
+                                    <button class="btn-edit" onclick="editStudent(103)">Edit</button>
+                                    <button class="btn-delete" onclick="deleteStudent(103)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to apply search and filters
+        function applyFilters() {
+            const searchQuery = document.getElementById('search').value.trim().toLowerCase();
+            const departmentFilter = document.getElementById('filter-department').value.trim().toLowerCase();
+            const programmeFilter = document.getElementById('filter-programme').value.trim().toLowerCase();
+            const yearFilter = document.getElementById('filter-year').value.trim().toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+
+            rows.forEach(row => {
+                const id = row.cells[0].textContent.trim().toLowerCase();
+                const name = row.cells[1].textContent.trim().toLowerCase();
+                const department = row.cells[2].textContent.trim().toLowerCase();
+                const programme = row.cells[3].textContent.trim().toLowerCase();
+                const enrolmentDate = row.cells[4].textContent.trim();
+                const year = enrolmentDate.substring(0, 4);
+
+                const matchesSearch = id.includes(searchQuery) || name.includes(searchQuery);
+                const matchesDepartment = departmentFilter === '' || department === departmentFilter;
+                const matchesProgramme = programmeFilter === '' || programme === programmeFilter;
+                const matchesYear = yearFilter === '' || year === yearFilter;
+
+                if (matchesSearch && matchesDepartment && matchesProgramme && matchesYear) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

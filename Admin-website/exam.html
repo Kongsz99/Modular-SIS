@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Exams</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="sidebar.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-user-shield"></i>
+                <span>Admin Panel</span>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="exam.html" class="active">
+                        <i class="fas fa-pencil-alt"></i>
+                        <span>Exams</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>Exam</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Toggle Icon -->
+            <div class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+                 <!-- Content Area -->
+               <div class="content">
+                <!-- New Button -->
+                <div class="new-button-container">
+                    <a href="add_exam.html" class="btn-new">
+                        <i class="fas fa-plus"></i>
+                        New Exam
+                    </a>
+                </div>
+
+              <!-- Content Area -->
+            <div class="content"> 
+                <h2>Exam List</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Exam ID</th>
+                            <th>Exam Name</th>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th>
+                            <th>Location</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>EX101</td>
+                            <td>Computer Science Midterm</td>
+                            <td>2023-11-15</td>
+                            <td>10:00</td>
+                            <td>12:00</td>
+                            <td>Online</td>
+                            <td>
+                                <button class="btn-edit" onclick="editExam('EX101')">Edit</button>
+                                <button class="btn-delete" onclick="deleteExam('EX101')">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addExam() {
+            alert("Add new exam functionality!");
+            // Redirect to a page where admin can add a new exam.
+        }
+
+        function editExam(examId) {
+            alert("Editing exam: " + examId);
+            // Redirect to an edit page or show a modal to edit the exam details.
+        }
+
+        function deleteExam(examId) {
+            if (confirm("Are you sure you want to delete exam " + examId + "?")) {
+                alert("Exam " + examId + " has been deleted.");
+                // You can send an API request here to delete the exam.
+            }
+        }
+    </script>
+</body>
+</html>

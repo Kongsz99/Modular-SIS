@@ -1,0 +1,316 @@
+/* General Styles */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px !important;
+    background-color: white !important;
+    box-shadow: var(--box-shadow) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+}
+
+.header h1 {
+    margin: 0 !important;
+    font-size: 1.5rem !important;
+    color: var(--secondary-color) !important;
+}
+
+.header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.user-profile {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.user-profile i {
+    font-size: 1.5rem !important;
+    color: var(--primary-color) !important;
+}
+
+.logout-btn button {
+    background-color: var(--danger-color) !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 15px !important;
+    border-radius: var(--border-radius) !important;
+    cursor: pointer !important;
+    transition: all 0.3s !important;
+}
+
+.logout-btn button:hover {
+    background-color: #c0392b !important;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #1b7098;
+    color: #fff;
+    height: 100vh; 
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed; /* Keep the sidebar fixed */
+    transition: width 0.3s ease; /* Smooth transition for the sidebar width */
+    overflow-y: auto; /* Enable vertical scrolling within the sidebar */
+}
+
+/* Custom scrollbar for WebKit browsers*/
+.sidebar::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #555; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Color of the scrollbar thumb on hover */
+}
+
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .logo i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.sidebar .logo span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar .nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .nav li {
+    margin: 15px 0;
+}
+
+.sidebar .nav li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .nav li a:hover {
+    /* background-color: #34495e; */
+    /* background-color: #81bed4f9; */
+    background-color: #5594adf9;
+    /* opacity: 0.4; */
+    transition: 0.3s;
+}
+
+.sidebar .nav li.active a {
+    /* background-color: #34495e; */
+    background-color: #214a73;
+
+}
+
+.sidebar .nav li a i {
+    margin-right: 10px;
+    width: 20px; /* Ensure consistent width for icons */
+    text-align: center; /* Center the icon within its space */
+}
+
+.sidebar.closed {
+    width: 0;
+    padding-top: 50px; /* Keep padding for smooth transition */
+    display: none;
+}
+
+/* Show content when sidebar is open */
+.sidebar.open {
+    visibility: visible;
+}
+
+/* Sidebar toggle icon at top-right */
+.sidebar-toggle {
+    position:absolute;
+    top: 18px;
+    left: 215px;  /* Align the icon to the top-left */
+    right: 0;  /* Remove right positioning */
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* You can also add transition effects to specific sections (e.g., sidebar, content) */
+/* .sidebar, .main-content {
+    transition: transform 0.5s ease;
+} */
+
+.sidebar-toggle i {
+    color: #ffffff;
+}
+
+.sidebar.closed + .main-content {
+    margin-left: 0;
+    transform: translateX(0.5);  /* No translation when the sidebar is open */
+
+}
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    background-color: #f4f7f6;
+    margin-left: 250px; /* To account for the fixed sidebar */
+}
+
+.content {
+    padding: 20px;
+}
+
+
+/* Submit Button (Centered) */
+.submit-button {
+    text-align: center; /* Center the button */
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #3d84d0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* Search and Filter */
+.search-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-filter button {
+    background-color: #3867cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-filter button:hover {
+    background-color: #6990b6;
+}
+
+
+/* Buttons */
+.btn-edit,
+.btn-delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-edit {
+    background-color: #f39c12;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: #fff;
+    margin-left: 5px;
+}
+
+.btn-delete:hover {
+    background-color: #e53935;
+}
+
+/* New Button */
+.new-button-container {
+    margin-bottom: 20px;
+}
+
+.btn-new {
+    background-color: #3d84d0; /* Blue color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    /* transition: background-color 0.3s; */
+}
+
+.btn-new:hover {
+    /* background-color: #156082; Darker blue on hover #3d84d0 #156082 */
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.btn-new i {
+    font-size: 16px;
+}

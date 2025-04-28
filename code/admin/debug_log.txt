@@ -1,0 +1,54 @@
+Array
+(
+    [MIBDIRS] => D:/Xampp/php/extras/mibs
+    [MYSQL_HOME] => \xampp\mysql\bin
+    [OPENSSL_CONF] => D:/Xampp/apache/bin/openssl.cnf
+    [PHP_PEAR_SYSCONF_DIR] => \xampp\php
+    [PHPRC] => \xampp\php
+    [TMP] => \xampp\tmp
+    [HTTP_HOST] => localhost
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_SEC_CH_UA] => "Not A(Brand";v="8", "Chromium";v="132", "Opera";v="117"
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_SEC_CH_UA_PLATFORM] => "Windows"
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 OPR/117.0.0.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+    [HTTP_SEC_FETCH_SITE] => same-origin
+    [HTTP_SEC_FETCH_MODE] => navigate
+    [HTTP_SEC_FETCH_USER] => ?1
+    [HTTP_SEC_FETCH_DEST] => document
+    [HTTP_REFERER] => http://localhost/my-project/admin/student.php
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br, zstd
+    [HTTP_ACCEPT_LANGUAGE] => en-GB,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+    [HTTP_COOKIE] => PHPSESSID=tvdpb7hjstb63f5vrqe3hmdmiq; username-localhost-8888="2|1:0|10:1743074766|23:username-localhost-8888|200:eyJ1c2VybmFtZSI6ICIwNzNhYjFjY2JlNDA0NDMyOTc5MDQ4OGJkMTYwN2Y1NyIsICJuYW1lIjogIkFub255bW91cyBFdXJ5ZG9tZSIsICJkaXNwbGF5X25hbWUiOiAiQW5vbnltb3VzIEV1cnlkb21lIiwgImluaXRpYWxzIjogIkFFIiwgImNvbG9yIjogbnVsbH0=|edd71bb07c399aec9c7d8de6cbd2197dcfffc3caaedb12d4ce9906868c0420bb"; _xsrf=2|1b5c0bf0|602f838b19e68b74a22921467462f9ce|1743074766
+    [PATH] => D:\Apps\Java JDK\bin;C:\Users\shinz\AppData\Roaming\Python\Python312\Scripts;C:\Program Files\Python312\Scripts\;C:\Program Files\Python312\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;D:\PostgreSQL\bin;C:\Users\shinz\AppData\Local\Programs\Python\Python312\;C:\Users\shinz\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\shinz\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\shinz\AppData\Local\Programs\Python\Python312\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;D:\Xampp\php;D:\Apps\Java JDK\bin;D:\Apps\spark\spark-3.5.5-bin-hadoop3\bin;C:\Users\shinz\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\shinz\AppData\Local\Programs\Python\Python313\;C:\Users\shinz\AppData\Local\Programs\Python\Launcher\;C:\Users\shinz\AppData\Local\Microsoft\WindowsApps;D:\Apps\datagrip\DataGrip 2024.2.2\bin;;C:\Users\shinz\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\shinz\.dotnet\tools;D:\PostgreSQL\bin;C:\Users\shinz\AppData\Local\Programs\Python\Python312\Scripts;D:\Desktop\PyCharm Community Edition 2024.3.4\bin;;
+    [SystemRoot] => C:\WINDOWS
+    [COMSPEC] => C:\WINDOWS\system32\cmd.exe
+    [PATHEXT] => .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW
+    [WINDIR] => C:\WINDOWS
+    [SERVER_SIGNATURE] => <address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 Server at localhost Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12
+    [SERVER_NAME] => localhost
+    [SERVER_ADDR] => ::1
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => ::1
+    [DOCUMENT_ROOT] => D:/Xampp/htdocs
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => D:/Xampp/htdocs
+    [SERVER_ADMIN] => postmaster@localhost
+    [SCRIPT_FILENAME] => D:/Xampp/htdocs/my-project/admin/add_student.php
+    [REMOTE_PORT] => 63955
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => 
+    [REQUEST_URI] => /my-project/admin/add_student.php
+    [SCRIPT_NAME] => /my-project/admin/add_student.php
+    [PHP_SELF] => /my-project/admin/add_student.php
+    [REQUEST_TIME_FLOAT] => 1743531268.8136
+    [REQUEST_TIME] => 1743531268
+)

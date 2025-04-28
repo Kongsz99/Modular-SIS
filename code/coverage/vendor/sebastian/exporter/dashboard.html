@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for D:\Xampp\htdocs\my-project\vendor\sebastian\exporter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../../_css/bootstrap.min.css?v=11.0.9" rel="stylesheet" type="text/css">
+  <link href="../../../_css/nv.d3.min.css?v=11.0.9" rel="stylesheet" type="text/css">
+  <link href="../../../_css/style.css?v=11.0.9" rel="stylesheet" type="text/css">
+  <link href="../../../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../../../index.html">D:\Xampp\htdocs\my-project</a></li>
+         <li class="breadcrumb-item"><a href="../../index.html">vendor</a></li>
+         <li class="breadcrumb-item"><a href="../index.html">sebastian</a></li>
+         <li class="breadcrumb-item"><a href="index.html">exporter</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="tests/ExporterTest.php.html#41">SebastianBergmann\Exporter\ExporterTest</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/_fixture/ExampleClass.php.html#15">SebastianBergmann\Exporter\ExampleClass</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#45">SebastianBergmann\Exporter\Exporter</a></td><td class="text-right">12%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Exporter.php.html#45">SebastianBergmann\Exporter\Exporter</a></td><td class="text-right">2696</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#41">SebastianBergmann\Exporter\ExporterTest</a></td><td class="text-right">306</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Exporter.php.html#89"><abbr title="SebastianBergmann\Exporter\Exporter::shortenedRecursiveExport">shortenedRecursiveExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#123"><abbr title="SebastianBergmann\Exporter\Exporter::shortenedExport">shortenedExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#180"><abbr title="SebastianBergmann\Exporter\Exporter::toArray">toArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#229"><abbr title="SebastianBergmann\Exporter\Exporter::countProperties">countProperties</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#249"><abbr title="SebastianBergmann\Exporter\Exporter::shortenedCountedRecursiveExport">shortenedCountedRecursiveExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#365"><abbr title="SebastianBergmann\Exporter\Exporter::exportString">exportString</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#388"><abbr title="SebastianBergmann\Exporter\Exporter::exportArray">exportArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#417"><abbr title="SebastianBergmann\Exporter\Exporter::exportObject">exportObject</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#449"><abbr title="SebastianBergmann\Exporter\Exporter::canBeReflected">canBeReflected</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#48"><abbr title="SebastianBergmann\Exporter\ExporterTest::exportProvider">exportProvider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#308"><abbr title="SebastianBergmann\Exporter\ExporterTest::shortenedExportProvider">shortenedExportProvider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#351"><abbr title="SebastianBergmann\Exporter\ExporterTest::provideNonBinaryMultibyteStrings">provideNonBinaryMultibyteStrings</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#363"><abbr title="SebastianBergmann\Exporter\ExporterTest::shortenedRecursiveExportProvider">shortenedRecursiveExportProvider</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#391"><abbr title="SebastianBergmann\Exporter\ExporterTest::testExport">testExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#400"><abbr title="SebastianBergmann\Exporter\ExporterTest::testExport2">testExport2</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#483"><abbr title="SebastianBergmann\Exporter\ExporterTest::testShortenedExport">testShortenedExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#497"><abbr title="SebastianBergmann\Exporter\ExporterTest::testShortenedExportForMultibyteCharacters">testShortenedExportForMultibyteCharacters</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#524"><abbr title="SebastianBergmann\Exporter\ExporterTest::testNonBinaryStringExport">testNonBinaryStringExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#533"><abbr title="SebastianBergmann\Exporter\ExporterTest::testNonObjectCanBeReturnedAsArray">testNonObjectCanBeReturnedAsArray</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#538"><abbr title="SebastianBergmann\Exporter\ExporterTest::testIgnoreKeysInValue">testIgnoreKeysInValue</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#551"><abbr title="SebastianBergmann\Exporter\ExporterTest::testShortenedRecursiveExport">testShortenedRecursiveExport</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#557"><abbr title="SebastianBergmann\Exporter\ExporterTest::testShortenedRecursiveOccurredRecursion">testShortenedRecursiveOccurredRecursion</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#570"><abbr title="SebastianBergmann\Exporter\ExporterTest::testShortenedExportDoesNotInitializeLazyObject">testShortenedExportDoesNotInitializeLazyObject</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#585"><abbr title="SebastianBergmann\Exporter\ExporterTest::trimNewline">trimNewline</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="tests/_fixture/ExampleClass.php.html#22"><abbr title="SebastianBergmann\Exporter\ExampleClass::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#284"><abbr title="SebastianBergmann\Exporter\Exporter::recursiveExport">recursiveExport</abbr></a></td><td class="text-right">36%</td></tr>
+       <tr><td><a href="src/Exporter.php.html#348"><abbr title="SebastianBergmann\Exporter\Exporter::exportFloat">exportFloat</abbr></a></td><td class="text-right">85%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="src/Exporter.php.html#123"><abbr title="SebastianBergmann\Exporter\Exporter::shortenedExport">shortenedExport</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="src/Exporter.php.html#180"><abbr title="SebastianBergmann\Exporter\Exporter::toArray">toArray</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="src/Exporter.php.html#249"><abbr title="SebastianBergmann\Exporter\Exporter::shortenedCountedRecursiveExport">shortenedCountedRecursiveExport</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="src/Exporter.php.html#284"><abbr title="SebastianBergmann\Exporter\Exporter::recursiveExport">recursiveExport</abbr></a></td><td class="text-right">55</td></tr>
+       <tr><td><a href="src/Exporter.php.html#89"><abbr title="SebastianBergmann\Exporter\Exporter::shortenedRecursiveExport">shortenedRecursiveExport</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="src/Exporter.php.html#388"><abbr title="SebastianBergmann\Exporter\Exporter::exportArray">exportArray</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Exporter.php.html#417"><abbr title="SebastianBergmann\Exporter\Exporter::exportObject">exportObject</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="src/Exporter.php.html#229"><abbr title="SebastianBergmann\Exporter\Exporter::countProperties">countProperties</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="src/Exporter.php.html#365"><abbr title="SebastianBergmann\Exporter\Exporter::exportString">exportString</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Exporter.php.html#449"><abbr title="SebastianBergmann\Exporter\Exporter::canBeReflected">canBeReflected</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#363"><abbr title="SebastianBergmann\Exporter\ExporterTest::shortenedRecursiveExportProvider">shortenedRecursiveExportProvider</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="tests/ExporterTest.php.html#497"><abbr title="SebastianBergmann\Exporter\ExporterTest::testShortenedExportForMultibyteCharacters">testShortenedExportForMultibyteCharacters</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="src/Exporter.php.html#348"><abbr title="SebastianBergmann\Exporter\Exporter::exportFloat">exportFloat</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 11.0.9</a> using <a href="https://www.php.net/" target="_top">PHP 8.2.12</a> and <a href="https://phpunit.de/">PHPUnit 11.0.0</a> at Tue Apr 15 22:05:34 CEST 2025.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="../../../_js/jquery.min.js?v=11.0.9" type="text/javascript"></script>
+  <script src="../../../_js/d3.min.js?v=11.0.9" type="text/javascript"></script>
+  <script src="../../../_js/nv.d3.min.js?v=11.0.9" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([2,0,1,0,0,0,0,0,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([25,0,0,0,1,0,0,0,0,1,0,2], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[12.777777777777777,63,"<a href=\"src\/Exporter.php.html#45\">SebastianBergmann\\Exporter\\Exporter<\/a>"],[0,17,"<a href=\"tests\/ExporterTest.php.html#41\">SebastianBergmann\\Exporter\\ExporterTest<\/a>"],[0,1,"<a href=\"tests\/_fixture\/ExampleClass.php.html#15\">SebastianBergmann\\Exporter\\ExampleClass<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"src\/Exporter.php.html#61\">SebastianBergmann\\Exporter\\Exporter::__construct<\/a>"],[100,1,"<a href=\"src\/Exporter.php.html#80\">SebastianBergmann\\Exporter\\Exporter::export<\/a>"],[0,5,"<a href=\"src\/Exporter.php.html#89\">SebastianBergmann\\Exporter\\Exporter::shortenedRecursiveExport<\/a>"],[0,10,"<a href=\"src\/Exporter.php.html#123\">SebastianBergmann\\Exporter\\Exporter::shortenedExport<\/a>"],[0,9,"<a href=\"src\/Exporter.php.html#180\">SebastianBergmann\\Exporter\\Exporter::toArray<\/a>"],[0,3,"<a href=\"src\/Exporter.php.html#229\">SebastianBergmann\\Exporter\\Exporter::countProperties<\/a>"],[0,7,"<a href=\"src\/Exporter.php.html#249\">SebastianBergmann\\Exporter\\Exporter::shortenedCountedRecursiveExport<\/a>"],[36.84210526315789,13,"<a href=\"src\/Exporter.php.html#284\">SebastianBergmann\\Exporter\\Exporter::recursiveExport<\/a>"],[85.71428571428571,2,"<a href=\"src\/Exporter.php.html#348\">SebastianBergmann\\Exporter\\Exporter::exportFloat<\/a>"],[0,2,"<a href=\"src\/Exporter.php.html#365\">SebastianBergmann\\Exporter\\Exporter::exportString<\/a>"],[0,4,"<a href=\"src\/Exporter.php.html#388\">SebastianBergmann\\Exporter\\Exporter::exportArray<\/a>"],[0,4,"<a href=\"src\/Exporter.php.html#417\">SebastianBergmann\\Exporter\\Exporter::exportObject<\/a>"],[0,2,"<a href=\"src\/Exporter.php.html#449\">SebastianBergmann\\Exporter\\Exporter::canBeReflected<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#48\">SebastianBergmann\\Exporter\\ExporterTest::exportProvider<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#308\">SebastianBergmann\\Exporter\\ExporterTest::shortenedExportProvider<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#351\">SebastianBergmann\\Exporter\\ExporterTest::provideNonBinaryMultibyteStrings<\/a>"],[0,2,"<a href=\"tests\/ExporterTest.php.html#363\">SebastianBergmann\\Exporter\\ExporterTest::shortenedRecursiveExportProvider<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#391\">SebastianBergmann\\Exporter\\ExporterTest::testExport<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#400\">SebastianBergmann\\Exporter\\ExporterTest::testExport2<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#483\">SebastianBergmann\\Exporter\\ExporterTest::testShortenedExport<\/a>"],[0,2,"<a href=\"tests\/ExporterTest.php.html#497\">SebastianBergmann\\Exporter\\ExporterTest::testShortenedExportForMultibyteCharacters<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#524\">SebastianBergmann\\Exporter\\ExporterTest::testNonBinaryStringExport<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#533\">SebastianBergmann\\Exporter\\ExporterTest::testNonObjectCanBeReturnedAsArray<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#538\">SebastianBergmann\\Exporter\\ExporterTest::testIgnoreKeysInValue<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#551\">SebastianBergmann\\Exporter\\ExporterTest::testShortenedRecursiveExport<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#557\">SebastianBergmann\\Exporter\\ExporterTest::testShortenedRecursiveOccurredRecursion<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#570\">SebastianBergmann\\Exporter\\ExporterTest::testShortenedExportDoesNotInitializeLazyObject<\/a>"],[0,1,"<a href=\"tests\/ExporterTest.php.html#585\">SebastianBergmann\\Exporter\\ExporterTest::trimNewline<\/a>"],[0,1,"<a href=\"tests\/_fixture\/ExampleClass.php.html#22\">SebastianBergmann\\Exporter\\ExampleClass::__construct<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

@@ -1,0 +1,1111 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px !important;
+    background-color: white !important;
+    box-shadow: var(--box-shadow) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+}
+
+.header h1 {
+    padding-left: 30px !important;
+    margin: 0 !important;
+    font-size: 1.5rem !important;
+    color: var(--secondary-color) !important;
+}
+
+.header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.user-profile {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.user-profile i {
+    font-size: 1.5rem !important;
+    color: var(--primary-color) !important;
+}
+
+.logout-btn button {
+    background-color: var(--danger-color) !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 15px !important;
+    border-radius: var(--border-radius) !important;
+    cursor: pointer !important;
+    transition: all 0.3s !important;
+}
+
+.logout-btn button:hover {
+    background-color: #c0392b !important;
+}
+
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    background-color: #f4f7f6;
+    margin-left: 250px; /* To account for the fixed sidebar */
+}
+
+/* Content Area Styles */
+.content {
+    padding: 20px;
+ }
+ /*
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    margin-left: 40px;
+} 
+
+.header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 13px !important;
+}
+
+.header .user-profile {
+    display: flex !important;
+    align-items: center !important;
+    margin-right: 20px !important;
+}
+
+.header .user-profile i {
+    font-size: 24px !important;
+    margin-right: 10px !important;
+}
+
+.logout-btn button {
+    background-color: #f44336 !important;
+    color: white !important;
+    border: none !important;
+    padding: 8px 20px !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    font-weight: 500 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    margin: 0 !important;
+    display: inline-block !important;
+    line-height: 1.5 !important;
+}
+
+.logout-btn button:hover {
+    background-color: #d32f2f !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15) !important;
+}
+
+.logout-btn button:active {
+    transform: translateY(0) !important;
+} */
+
+
+/* Welcome Banner Styles */
+
+.welcome-banner {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.academic-status {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.status-badge.enrolled {
+    background: #4CAF50;
+}
+
+.status-badge.credits {
+    background: #2196F3;
+}     
+
+/* Submit Button (Centered) */
+.submit-button {
+    text-align: center; /* Center the button */
+    margin-top: 20px;
+}
+
+/* Enrolment Container Styles */
+.enrolment-container {
+    margin: 2rem 50px;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.progress-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.progress-header h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.progress-status {
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+.progress-tracker-v2 {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.step-indicator {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.step-indicator.completed {
+    background: #4CAF50;
+    box-shadow: 0 5px 15px rgba(76,175,80,0.3);
+}
+
+.step-indicator.current {
+    background: #2196F3;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(33,150,243,0.3);
+}
+
+.step-name {
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.progress-enrol-bar {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 4px;
+    background: #e0e0e0;
+    width: 100%;
+    z-index: 1;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #7adf7d;
+    transition: width 0.4s ease;
+}
+
+.enrolment-action {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+button {
+    /* background-color: #3760d1;
+    color: white; */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+   }
+.action-button {
+    background: #2196F3;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    /* border-radius: 30px; */
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-button:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33,150,243,0.3);
+}
+
+.action-button:active {
+    transform: translateY(0);
+}
+
+.action-button.completed {
+    background: #4CAF50;
+    cursor: default;
+}
+
+.action-card i {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.home-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.content-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.content-card h2 {
+    margin-bottom: 10px;
+}
+
+.deadline-list {
+    margin-top: 1rem;
+}
+
+.deadline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.timetable-event {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.progress-section {
+    margin-top: 1.5rem;
+}
+
+.progress-enrol-bar {
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    margin: 30px 0;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+} 
+
+.progress-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Staff Details Styles */
+.person-details-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.details-section {
+    margin-bottom: 30px;
+}
+
+.details-section h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between fields */
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.detail-item label {
+    font-weight: bold;
+    color: #555;
+}
+
+
+.details-grid .detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.details-grid .detail-item label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.details-grid .detail-item span {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #1b7098;
+    color: #fff;
+}
+
+/* table tr:hover {
+    background-color: #bbdefb; /* Darker light blue on hover 
+} 
+
+/* Programme Details Styles */
+.status-active {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.status-in-progress {
+    color: #ffc107;
+    font-weight: 500;
+}
+
+.status-completed {
+    color: #17a2b8;
+    font-weight: 500;
+}
+
+.progress-container {
+    margin-top: 1.5rem;
+}
+
+.progress-bar {
+    background-color: #e9ecef;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: #00ffaa;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.progress-stats {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: #6c757d;
+}
+
+/* assignment page */
+.assignment-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border-left: 4px solid #3d84d0;
+}
+
+.assignment-card:hover {
+    transform: translateY(-2px);
+}
+
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.assignment-title {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.assignment-meta {
+    margin: 10px 0;
+    color: #666;
+}
+
+.status-indicator {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.status-not-started { background: #f0f0f0; color: #666; }
+.status-in-progress { background: #fff3cd; color: #856404; }
+.status-overdue { background: #f8d7da; color: #721c24; }
+.status-completed { background: #d4edda; color: #155724; }
+
+.assignment-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.deadline-warning {
+    color: #dc3545;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.grade-percentage {
+    font-size: 1.1em;
+    color: #3d84d0;
+    font-weight: bold;
+}
+
+/* exam page */
+.status-upcoming {
+    color: #ffc107;
+    font-weight: 500;
+}
+
+.results-footer {
+    margin-top: 1rem;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.timetable-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.timetable-day {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+}
+
+.exam-card {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.exam-time {
+    color: #17a2b8;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.exam-subject {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.exam-location {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+/* timetable page  */
+
+:root {
+    --lecture-color: #B3E5FC; /* Light blue for lectures */
+    --tutorial-color: #C8E6C9; /* Light green for tutorials */
+    --border-color: #e0e0e0;
+}
+.calendar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.month-navigation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    gap: 1px;
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.time-column {
+    background-color: white;
+    padding: 10px;
+    text-align: right;
+    border-right: 1px solid var(--border-color);
+}
+
+.day-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.calendar-cell {
+    background-color: white;
+    min-height: 60px;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.event {
+    position: absolute;
+    left: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: calc(100% - 10px); /* Full width of the cell */
+}
+
+.lecture {
+    background-color: var(--lecture-color);
+    border-left: 4px solid #29B6F6;
+}
+
+.tutorial {
+    background-color: var(--tutorial-color);
+    border-left: 4px solid #66BB6A;
+}
+
+.event-code {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.event-location {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.today {
+    background-color: #ffffcc !important;
+}
+
+/* finance page */
+.balance-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   /* background-color: #f8f9fa;*/
+   background-color: #e8f6f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.balance-amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.btn-pay-now {
+   /* background-color: #3498db;*/
+   background-color: #32ba4f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} 
+
+.btn-pay-now:hover {
+    background-color: rgb(87, 194, 112);
+}
+
+/* Tuition Fee Breakdown */
+ .selector-container {
+    padding: 0px 10px 10px 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.selector-container label {
+    font-weight: bold;
+    color:#4b5156;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.year-dropdown {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    color:#4b5156;
+}
+
+/* Add these styles to your existing CSS */
+.fee-breakdown-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.fee-item, .scholarship-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.scholarship-info {
+    background-color: #e8f5e9;
+    border-left: 4px solid #4CAF50;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+.scholarship-name {
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.total-due {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 0;
+    border-top: 2px solid #eee;
+}
+
+.installment-plan {
+    margin-top: 20px;
+}
+
+.installment {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Payment History Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+
+.status-paid { color: #4CAF50; }
+.status-overdue { color: #f44336; }
+.status-due { color: #FFC107; }
+
+/* Payment Methods */
+.payment-methods {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.method-card {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-edit {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ .installment-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.installment-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.installment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.installment-status {
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.installment-upcoming { background: #fff3cd; color: #856404; }
+.installment-due { background: #f8d7da; color: #721c24; }
+.installment-paid { background: #d4edda; color: #155724; }*/
+
+.payment-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-pay-installment {
+    /*background: #3498db;*/
+    background-color: #32ba4f;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.full-payment-option {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.full-payment-option p {
+    text-align: center;
+}
+
+.full-payment-option .btn-pay-now {
+    display: block; /* Makes button take full width */
+    margin: 10px auto 0; /* Centers horizontally */
+    width: fit-content; /* Makes button width match content */
+}
+
+/* settings page */
+/* Form Container */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Reasonable max width for the form */
+    margin: 20px auto; /* Center the form */
+
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input Fields and Dropdowns */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    max-width: 400px; /* Set the same max-width for both inputs and dropdowns */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+/* Focus State */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.btn {
+    background-color: #3d84d0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* enrol stage 1 - 4 */
+.enrol-page .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.enrol-page h1 {
+    text-align: center;
+    color: #3d84d0;
+}
+
+.enrol-page h2 {
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+.enrol-page ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.enrol-page li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+    /* this is for enrolment 1 */
+.enrol-page .agreement-box {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.enrol-page .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.enrol-page .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5); /* 1.5 makes the checkbox 1.5 times larger */
+}
+
+.enrol-page .footer {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* for module-selection */
+.enrol-page .module-selection {
+    margin-top: 20px;
+}
+
+.enrol-page .module-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #dee2e6;
+}
+
+.enrol-page .module-card h3 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.enrol-page .module-card label {
+    display: block;
+    margin: 5px 0;
+}
+
+.enrol-page .center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

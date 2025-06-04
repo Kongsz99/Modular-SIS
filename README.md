@@ -11,7 +11,7 @@ A **Modular Student Information System** (MSIS) designed to manage and streamlin
 - **Responsive Interface**: User-friendly interface for students, faculties, and administrators.
 
 ## Flowchart
-![Flow Chart](diagram/Flowchart.png)
+![Flow Chart](diagram/Flowchart.png =100x20)
 
 ## System Architecture
 
@@ -33,19 +33,13 @@ The system uses **PostgreSQL** with **Foreign Data Wrapper (FDW)** support for m
 
 The ERD shows the relationship between various entities in the system like Students, Courses, Departments, Grades, etc.
 
-![ERD Diagram](path/to/your/ERD.png)
+![ERD Diagram](diagram/er_diagram.png)
 
 ### Data Flow Diagram (DFD)
 
 The DFD illustrates how data flows within the system from input to processing and output, including how different actors interact with the system.
 
 ![DFD Diagram](diagram/data_flow_diagram.png)
-
-### Entity Relationship Diagram (ER Diagram)
-
-The ER diagram visualizes the entities, their attributes, and relationships, helping in understanding the underlying database structure.
-
-![ER Diagram](diagram/er_diagram.png)
 
 ## Installation
 
@@ -61,8 +55,7 @@ The ER diagram visualizes the entities, their attributes, and relationships, hel
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/yourusername/modular-student-info-system.git
-   cd modular-student-info-system
-````
+   ```
 
 2. **Set Up PostgreSQL Database**:
 
@@ -88,49 +81,25 @@ The ER diagram visualizes the entities, their attributes, and relationships, hel
 
 ### Login Page
 
-![Login Page](path/to/screenshot1.png)
+![Login Page](screenshot/login.png)
 
 ### Dashboard (Admin View)
 
-![Admin Dashboard](path/to/screenshot2.png)
+![Admin Dashboard](screenshot/global-dashboard.png)
 
-### Student Profile Page
+### Dashboad (Student View)
 
-![Student Profile](path/to/screenshot3.png)
+![Student Dashboard](screenshot/global-dashboard.png)
 
 ## Technologies Used
 
 * **Backend**: PHP
 * **Frontend**: HTML, CSS, JavaScript
 * **Database**: PostgreSQL with FDW (Foreign Data Wrapper)
-* **Web Server**: Apache or Nginx
+* **Web Server**: Apache
 
 ## Contributions
 
 Feel free to contribute to this project by submitting issues, suggestions, or pull requests. Contributions are welcome!
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-
----
-
-### Breakdown of Key Sections:
-- **Project Overview**: Describes the system and its main features.
-- **System Architecture**: Includes a diagram and explains how the system is structured with central + departmental databases.
-- **ERD, DFD, ER Diagram**: Visualizes key database relationships and system data flow.
-- **Installation**: Step-by-step guide to set up the system.
-- **Screenshots**: Showcase of what the system looks like.
-- **Technologies Used**: The tech stack (PHP, PostgreSQL, etc.).
-
----
-
-### Next Steps:
-- Replace `path/to/your/` with actual image URLs in your repository.
-- Add a **License** section (optional) if you're planning to make the project public.
-- Consider writing a small **demo video** and link it in the README.
-
-Would you like to go over any specific part or need more assistance with the GitHub setup? Let me know!
-```

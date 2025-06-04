@@ -11,7 +11,7 @@ A **Modular Student Information System** (MSIS) designed to manage and streamlin
 - **Responsive Interface**: User-friendly interface for students, faculties, and administrators.
 
 ## Flowchart
-![Flow Chart](./diagram/Flowchart.png){width=100 height=20}
+![Flow Chart](./diagram/flow_chart.png)
 
 ## System Architecture
 
